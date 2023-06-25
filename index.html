@@ -25,7 +25,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text">₹</span>
 						</div>
-						<input type="number" id="investedAmt" class="form-control" min="1">
+						<input type="text" id="investedAmt" class="form-control">
 					</div>
 				</div>
 				<div class="form-group col-md-6">
@@ -40,7 +40,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text">₹</span>
 						</div>
-						<input type="number" id="currentSharePrice" class="form-control" min="1">
+						<input type="text" id="currentSharePrice" class="form-control">
 					</div>
 				</div>
 				<div class="form-group col-md-6">
@@ -56,9 +56,9 @@
 </body>
 <script>
 	function calculateAverage(params) {
-		var avgOneSharePrice = parseInt(document.getElementById('investedAmt').value, 10);
+		var avgOneSharePrice = parseFloat(document.getElementById('investedAmt').value, 10);
 		var noOfSharesPurchased = parseInt(document.getElementById('noOfSharesPurchased').value, 10);
-		var currentSharePrice = parseInt(document.getElementById('currentSharePrice').value, 10);
+		var currentSharePrice = parseFloat(document.getElementById('currentSharePrice').value, 10);
 		var noOfShares = parseInt(document.getElementById('noOfShares').value, 10);
 
 		var result = ((avgOneSharePrice * noOfSharesPurchased) + (currentSharePrice * noOfShares)) / (noOfShares +
